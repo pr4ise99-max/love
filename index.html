@@ -4,110 +4,199 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday, My Love ❤️</title>
+
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-    }
+body{
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4,#ffdde1);
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
+    overflow:hidden;
+}
 
-    .card {
-        background: white;
-        padding: 40px;
-        border-radius: 20px;
-        text-align: center;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        position: relative;
-        animation: float 3s ease-in-out infinite;
-    }
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 
-    h1 {
-        color: #ff4b5c;
-        font-size: 2.5em;
-        margin-bottom: 10px;
-    }
+.page{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    color:white;
+    transition:0.8s;
+    opacity:0;
+    pointer-events:none;
+}
 
-    p {
-        font-size: 1.2em;
-        color: #555;
-        margin-top: 15px;
-    }
+.active{
+    opacity:1;
+    pointer-events:auto;
+}
 
-    button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 25px;
-        background-color: #ff4b5c;
-        color: white;
-        font-size: 1em;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+.card{
+    background:white;
+    color:#444;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+    max-width:500px;
+    animation:float 3s ease-in-out infinite;
+}
 
-    button:hover {
-        background-color: #ff1e3c;
-        transform: scale(1.1);
-    }
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
 
-    .heart {
-        position: absolute;
-        color: #ff4b5c;
-        font-size: 20px;
-        animation: rise 5s linear infinite;
-    }
+h1{
+    color:#ff4b5c;
+    margin-bottom:10px;
+}
 
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-    }
+button{
+    margin-top:20px;
+    padding:10px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4b5c;
+    color:white;
+    font-size:1em;
+    cursor:pointer;
+    transition:0.3s;
+}
 
-    @keyframes rise {
-        0% { bottom: -20px; opacity: 1; }
-        100% { bottom: 100vh; opacity: 0; }
-    }
+button:hover{
+    background:#ff1e3c;
+    transform:scale(1.1);
+}
+
+.heart, .sparkle{
+    position:absolute;
+    animation:rise 6s linear infinite;
+}
+
+.heart{
+    color:#ff4b5c;
+}
+
+.sparkle{
+    color:gold;
+    font-size:14px;
+}
+
+@keyframes rise{
+    0%{bottom:-20px;opacity:1;}
+    100%{bottom:100vh;opacity:0;}
+}
 </style>
 </head>
 <body>
 
-<div class="card">
-    <h1>Happy Birthday, My Love 🎉</h1>
-    <p id="message">
-        Today is all about you — the one who makes my world brighter, safer, and happier.
-        I’m so lucky to call you mine. 💖
-    </p>
-    <button onclick="surprise()">Click for a Surprise 😏</button>
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <div class="card">
+        <h1>Hey Birthday Boy 🎂</h1>
+        <p>Close your eyes… make a wish… and step into your surprise.</p>
+        <button onclick="nextPage(2)">Enter ❤️</button>
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <div class="card">
+        <h1>HAPPYYY BIRTHDAYY SMOLLIEE 🎉</h1>
+        <p> Happy birthday, sweetheart. 🤍
+I can still hardly believe that I have found the love of my life on an online language learning app. We were total strangers but somehow our random chatting and endless late-night conversations and silly debates turned into something truly special all without us being in the same room. Your hazel eyes let me down every single time and your laugh... well I think you know what I mean. There are times when you throw me a bit of rage bait just to see me get mad and yes I do get mad at you but the second I get to hear you laugh my heart betrays me and I begin to flutter like a butterfly. I would do anything for that feeling. You are absolutely beautiful and I don't mean just on the outside but your inside is as beautiful as your outside is. I am very fortunate to know you and how hard you are working to try to improve your life without your family supporting you, carrying the world on your shoulders and making sure you work hard each day... I respect you more than you could ever know. Your life has been filled with struggles but please be reminded you are never alone... I'm here and I choose you! EVERYDAYYY.. Today on your birthday, I don’t celebrate this day, but celebrate YOU, THE BOY that brings so much softness, warmth, and brightness into my world. You make me proud. You inspire me with your ability to love and be grateful for everything in your life. You make my heart full of love for you that words in any language can’t describe. No matter what happens, no matter where you are, I will support you! I’m happy to say that I’ll continue to be there for you today, and always until the end of time!
+Happy Birthday my dear smollieee tinyyyy winieeee babieeee!
+.</p>
+        <button onclick="nextPage(3)">Next 💕</button>
+    </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <div class="card">
+        <h1>specially for my sanu 💌</h1>
+        <p id="letter">
+        I mistook my existence for a burden and my worth for silence
+Bent by expectations, trained into compliance.
+Helpless and lost in my thoughts, so messy and dark
+Then you showed up with your stupid talks and a different spark. 
+You arrived, like a river whispering through my poetry
+Because if not you, then who else could it be?
+
+Every gloomy day turns bright whenever your text lights my phone,
+You make me laugh at unfunny jokes in your playful tone of your own
+First sight of yours, eyes so magical, I was too stunned to speak
+Made me wanted to hide you from the world, for me alone to keep
+Perhaps it’s selfish of me, perhaps I’m asking too much,
+Can’t explain why every heartbeat of mine craves your touch
+
+Baby, I’d gladly lose myself with a smile, just to steal your gaze
+One look from you, and my world would drown in blissful haze.
+Even though I don’t believe in prayers or sacred rites,
+you’re the purest miracle my eyes have ever caught in sight. 
+        </p>
+        <button onclick="changeMessage()">Click for More 😏</button>
+        <button onclick="nextPage(4)">Final Surprise ✨</button>
+    </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+    <div class="card">
+        <h1>Forever Yours ❤️</h1>
+        <p>
+        You are my favourite person, my comfort, and my biggest blessing.
+        No matter what happens — I’m always on your side.
+        </p>
+    </div>
 </div>
 
 <script>
-function surprise() {
-    document.getElementById("message").innerHTML =
-        "You are my favorite person, my safe place, and my biggest blessing. " +
-        "May this year bring you success, laughter, and everything you dream of. " +
-        "And remember… I’m always yours. ❤️";
+function nextPage(pageNumber){
+    document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+    document.getElementById("page"+pageNumber).classList.add("active");
 }
 
-function createHeart() {
-    const heart = document.createElement("div");
+function changeMessage(){
+    document.getElementById("letter").innerHTML =
+    "You are my safe place, my happiness, and the love I never knew I needed. " +
+    "May your birthday be as special as the way you make me feel every day. ❤️";
+}
+
+function createHeart(){
+    const heart=document.createElement("div");
     heart.classList.add("heart");
-    heart.innerHTML = "❤";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    heart.innerHTML="❤";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=Math.random()*25+10+"px";
     document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
+    setTimeout(()=>heart.remove(),6000);
 }
 
-setInterval(createHeart, 500);
+function createSparkle(){
+    const sparkle=document.createElement("div");
+    sparkle.classList.add("sparkle");
+    sparkle.innerHTML="✨";
+    sparkle.style.left=Math.random()*100+"vw";
+    document.body.appendChild(sparkle);
+    setTimeout(()=>sparkle.remove(),6000);
+}
+
+setInterval(createHeart,500);
+setInterval(createSparkle,700);
 </script>
 
 </body>
 </html>
+
